@@ -124,6 +124,7 @@ void Scene1::OnDestroy() {}
 void Scene1::Update(const float deltaTime) {
 	// Calculate and apply any steering for npc's
 	blinky->Update(deltaTime);
+	projectile->Render();
 
 	//steering = seekAlgorithm->getSteering();
 	

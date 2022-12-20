@@ -32,6 +32,7 @@ public:
         0.0f,
         maxRotation_,
         0.0f,
+        0.0f,
     }
     {}
 

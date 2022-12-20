@@ -23,6 +23,7 @@ protected:
     float maxRotation;
     float maxAngular;
     float radius;           // for getting near walls
+    float health;
 
 	Vec3 imageSizeWorldCoords;
     SDL_Surface* image;
@@ -30,8 +31,8 @@ protected:
 
 public:
     Body();
-	Body(
-        Vec3 pos_, Vec3 vel_, Vec3 accel_, 
+    Body(
+        Vec3 pos_, Vec3 vel_, Vec3 accel_,
         float mass_,
         float radius_,
         float orientation_,
@@ -40,7 +41,8 @@ public:
         float maxSpeed_,
         float maxAcceleration_,
         float maxRotation_,
-        float maxAngular_
+        float maxAngular_,
+        float health_
     );
 	virtual ~Body();
     virtual void Update(float deltaTime);

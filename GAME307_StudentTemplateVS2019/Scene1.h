@@ -8,6 +8,7 @@
 #include "KinematicSeek.h"
 #include "KinematicFlee.h"
 #include "Pursue.h"
+#include "Projectile.h"
 
 using namespace MATH;
 class Scene1 : public Scene {
@@ -22,6 +23,7 @@ private:
 	Character* blinky;
 	StaticBody* seekNPC;
 	StaticBody* fleeNPC;
+	Projectile* projectile;
 
 	KinematicSteeringOutput* steering;
 	KinematicSteeringOutput* fleeing;

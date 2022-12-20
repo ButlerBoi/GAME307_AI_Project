@@ -14,6 +14,7 @@ Body::Body()
     maxAcceleration = 0.0f;
     maxRotation = 0.0f;
     maxAngular = 0.0f;
+    health = 100.0f;
 
 	image = nullptr;
 }
@@ -29,7 +30,8 @@ Body::Body(
     float maxSpeed_ = 5.0f,
     float maxAcceleration_ = 1.0f,
     float maxRotation_ = 1.0f,
-    float maxAngular_ = 1.0f
+    float maxAngular_ = 1.0f,
+    float health_ = 100.0f
 )
 {
     pos = pos_;
@@ -44,6 +46,7 @@ Body::Body(
     maxAcceleration = maxAcceleration_;
     maxRotation = maxRotation_;
     maxAngular = maxAngular_;
+    health = health_;
 
     image = nullptr;
 }

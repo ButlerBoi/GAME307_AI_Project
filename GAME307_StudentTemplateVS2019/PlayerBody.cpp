@@ -46,6 +46,16 @@ void PlayerBody::Render( float scale )
 
 void PlayerBody::HandleEvents( const SDL_Event& event )
 {
+
+    if (event.type == SDL_MOUSEBUTTONDOWN) {
+        switch (event.button.button) {
+            case SDL_BUTTON_LEFT:
+              printf("shoot\n");
+              break;
+        }
+         
+    }
+               
     // if key pressed, set velocity or acceleration
 
     if( event.type == SDL_KEYDOWN && event.key.repeat == 0 )
