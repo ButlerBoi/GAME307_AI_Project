@@ -1,26 +1,22 @@
-#ifndef KINEMATICFLEE_H
-#define KINEMATICFLEE_H
+#ifndef PURSUE_H
+#define PURSUE_H
 
 #include "Vector.h"
 #include "VMath.h"
 #include "Body.h"
 #include "KinematicSteeringOutput.h"
-#include "GameManager.h"
 
-
-using namespace MATH;
-
-class KinematicFlee
+class Pursue
 {
 private:
 	KinematicSteeringOutput* result;
 	Body* character;
 	Body* target;
+	float time;
 
 public:
-	KinematicFlee(Body* character_, Body* target_);
-	~KinematicFlee();
+	Pursue(Body* character_, Body* target_, float time_);
+	~Pursue();
 	KinematicSteeringOutput* getSteering();
 };
-
 #endif

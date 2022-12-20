@@ -112,9 +112,9 @@ bool Scene1::OnCreate() {
 
 	fleeAlgorithm = new KinematicFlee(fleeNPC, player);
 
-	seekAlgorithm = new KinematicSeek(seekNPC, player);
-
-
+	//seekAlgorithm = new KinematicSeek(seekNPC, player);
+	
+	pursueAlgorithm = new Pursue(seekNPC, player, 0.25f);
 
 	return true;
 }
@@ -125,13 +125,15 @@ void Scene1::Update(const float deltaTime) {
 	// Calculate and apply any steering for npc's
 	blinky->Update(deltaTime);
 
-	steering = seekAlgorithm->getSteering();
+	//steering = seekAlgorithm->getSteering();
+	
 	fleeing = fleeAlgorithm->getSteering();
+	steering = pursueAlgorithm->getSteering();
 
 	seekNPC->Update(deltaTime, steering);
 
 	fleeNPC->Update(deltaTime, fleeing);
-	
+
 	// Update player
 	game->getPlayer()->Update(deltaTime);
 }

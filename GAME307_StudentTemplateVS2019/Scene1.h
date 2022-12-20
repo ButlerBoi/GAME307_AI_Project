@@ -7,6 +7,7 @@
 #include "StaticBody.h"
 #include "KinematicSeek.h"
 #include "KinematicFlee.h"
+#include "Pursue.h"
 
 using namespace MATH;
 class Scene1 : public Scene {
@@ -26,6 +27,7 @@ private:
 	KinematicSteeringOutput* fleeing;
 	KinematicSeek* seekAlgorithm;
 	KinematicFlee* fleeAlgorithm;
+	Pursue* pursueAlgorithm;
 
 	Body* player;
 

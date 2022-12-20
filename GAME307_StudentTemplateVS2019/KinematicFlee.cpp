@@ -14,8 +14,9 @@ KinematicFlee::~KinematicFlee()
 
 KinematicSteeringOutput* KinematicFlee::getSteering()
 {
+	
 	result->velocity = character->getPos() - target->getPos();
-
+		
 	//full speed along this direction
 	result->velocity = VMath::normalize(result->velocity);
 	result->velocity = character->getMaxSpeed() * result->velocity;

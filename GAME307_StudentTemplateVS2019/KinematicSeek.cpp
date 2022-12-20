@@ -22,6 +22,5 @@ KinematicSteeringOutput* KinematicSeek::getSteering()
 
 	result->rotation = 0.0f;
 
-
 	return result;
 }
